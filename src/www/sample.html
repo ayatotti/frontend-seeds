@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+  <meta charset="UTF-8">
+  <title>Sample</title>
+  <link rel="stylesheet" href="/css/bundle.css">
+</head>
+<body id="html-body" class="theme--basic" ontouchstart="">
+<header id="header">
+  <h1>Sample Page</h1>
+</header>
+<nav>
+  <li><input id="nav__checkbox" type="checkbox" value="off" class="nav__checkbox">
+  <label class="nav__icon" for="nav__checkbox"></label>
+  <label class="nav__background" for="nav__checkbox"></label>
+  <ul class="nav">
+    <li class="nav__list"><a href="./sample.html">TOP</a></li>
+    <li class="nav__list">ABOUT</li>
+  </ul>
+</nav>
+<div id="sidebar">Sidebar</div>
+
+<div id="main">
+  main
+
+  <form>
+    <ul>
+      <li><button class="c-button">button</button></li>
+      <li><input type="button" class="c-button c-button--accept u-br-circle" value="button"></li>
+      <li><input type="submit" class="c-button c-button--accept u-br-rounded"></li>
+      <li><input type="reset" class="c-button c-button--reject"></li>
+
+      <li><input type="text" class="c-line-text-box"><label>text</label></li>
+      <li><input type="text" class="c-line-text-box" value="is disabled" disabled><label>text disabled</label></li>
+      <li><input type="email" class="c-line-text-box" placeholder="ex@mp.le"><label>email</label></li>
+      <li><input type="number" class="c-line-text-box"><label>number</label></li>
+      <li><input type="password" class="c-line-text-box"><label>password</label></li>
+      <li><input type="search" class="c-line-text-box"><label>search</label></li>
+      <li><input type="tel" class="c-line-text-box"><label>tel</label></li>
+      <li><input type="url" class="c-line-text-box"><label>url</label></li>
+      <li><input type="time" class="c-line-text-box"><label>time</label></li>
+      <li><input type="date" class="c-line-text-box"><label>date</label></li>
+      <li><input type="week" class="c-line-text-box"><label>week</label></li>
+      <li><input type="month" class="c-line-text-box"><label>month</label></li>
+      <li><input type="datetime-local" class="c-line-text-box"><label>datetime-local</label></li>
+      <li><textarea class="c-text-area"></textarea></li>
+
+      <li><select name="sample-select">
+        <option value="value1">Value 1</option>
+        <option value="value2" selected>Value 2</option>
+        <option value="value3">Value 3</option>
+      </select></li>
+
+      <li><input type="checkbox" name="toggle" id="sample-toggle-switch">
+        <label for="sample-toggle-switch" class="c-toggle-switch"></label>
+      </li>
+      <li><input type="checkbox" name="checkbox" id="sample-checkbox01">
+        <label for="sample-checkbox01" class="c-checkbox">checkbox</label>
+      </li>
+
+      <li>
+        <input type="radio" name="radio" id="sample-radio01">
+        <label for="sample-radio01" class="c-radio-button" onclick="themeChanger(0)">Theme0</label>
+        <input type="radio" name="radio" id="sample-radio02">
+        <label for="sample-radio02" class="c-radio-button" onclick="themeChanger(1)">Theme1</label>
+        <input type="radio" name="radio" id="sample-radio03">
+        <label for="sample-radio03" class="c-radio-button" onclick="themeChanger(2)">Theme2</label>
+      </li>
+
+      <li><input type="range" list="tickmarks">
+        <datalist id="tickmarks">
+          <option value="0" label="0%">
+          <option value="10">
+          <option value="20">
+          <option value="30">
+          <option value="40">
+          <option value="50" label="50%">
+          <option value="60">
+          <option value="70">
+          <option value="80">
+          <option value="90">
+          <option value="100" label="100%">
+        </datalist>
+        <label>range</label>
+      </li>
+
+      <li><meter min="200" max="500" value="350"></meter><label>meter</label></li>
+      <li><progress></progress><label>progress</label></li>
+      <li><input type="color"><label>color</label></li>
+      <li><input type="file"><label>file</label></li>
+    </ul>
+  </form>
+</div>
+
+<footer id="footer">Footer</footer>
+<script>
+    function themeChanger(theme)  {
+        switch (theme) {
+            case 0:
+                document.getElementById('html-body').className = "theme--basic";
+                break;
+            case 1:
+                document.getElementById('html-body').className = "theme--black";
+                break;
+            default:
+                document.getElementById('html-body').className = "theme--basic";
+                break;
+        }
+    }
+</script>
+</body>
+</html>

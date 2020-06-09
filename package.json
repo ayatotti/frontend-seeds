@@ -1,0 +1,59 @@
+{
+  "name": "frontend-seeds",
+  "version": "1.0.0",
+  "description": "cpc* Front-end Application Seeds",
+  "main": "bundle.js",
+  "scripts": {
+    "start": "gulp",
+    "build": "gulp build",
+    "clean": "gulp clean",
+    "watch": "gulp watch",
+    "server": "gulp server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ayatotti/frontend-seeds.git"
+  },
+  "author": "Ayato Yuki",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ayatotti/frontend-seeds/issues"
+  },
+  "homepage": "https://github.com/ayatotti/frontend-seeds#readme",
+  "dependencies": {
+    "react": "",
+    "react-dom": "",
+    "react-redux": "",
+    "react-router": "",
+    "redux": ""
+  },
+  "devDependencies": {
+    "@types/react": "",
+    "@types/react-dom": "",
+    "@types/react-redux": "",
+    "@types/react-router": "",
+    "awesome-typescript-loader": "",
+    "babel-core": "",
+    "babel-preset-es2015": "",
+    "babel-preset-react": "",
+    "del": "",
+    "gulp": "",
+    "gulp-autoprefixer": "",
+    "gulp-clean-css": "",
+    "gulp-htmllint": "",
+    "gulp-if": "",
+    "gulp-notify": "",
+    "gulp-plumber": "",
+    "gulp-stylint": "",
+    "gulp-stylus": "",
+    "gulp-tslint": "",
+    "gulp-uglify": "",
+    "gulp-webserver": "",
+    "require-dir": "",
+    "ress": "",
+    "tslint": "",
+    "tslint-eslint-rules": "",
+    "typescript": "",
+    "webpack-stream": ""
+  }
+}

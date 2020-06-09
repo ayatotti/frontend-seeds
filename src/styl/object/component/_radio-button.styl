@@ -1,0 +1,49 @@
+// ==========================================================================
+// Component Radio Button
+// ==========================================================================
+.c-radio-button
+  border-radius 5px
+  box-sizing border-box
+  display inline-block
+  padding 1px 4px 1px 22px
+  position relative
+  transition background-color .2s linear
+  vertical-align middle
+  +tm-set-child((background-color radio-button__label__background) (color radio-button__label-text))
+    {block}
+  &:after
+    border 2px solid
+    border-radius 50%
+    content ''
+    display block
+    height 16px
+    left 3px
+    margin-top -9px
+    position absolute
+    top 50%
+    transition border-color .2s linear
+    width 16px
+    +tm-set-child(border-color radio-button__checkbox)
+      {block}
+  &:before
+    border-radius 50%
+    content ''
+    display block
+    height 10px
+    left 6px
+    margin-top -6px
+    opacity 0
+    position absolute
+    top 50%
+    transition opacity .2s linear
+    width 10px
+    +tm-set-child(background-color radio-button__check-mark)
+      {block}
+    input:checked + &
+      opacity 1
+  &:hover
+    +tm-set-child(background-color radio-button__label__background--hover)
+      {block}
+    &:after
+      +tm-set-child(border-color radio-button__checkbox--hover)
+        {block}

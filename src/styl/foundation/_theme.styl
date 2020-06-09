@@ -1,0 +1,35 @@
+// ==========================================================================
+// Theme
+// ==========================================================================
+theme-names = 'basic' 'black'
+
+// Import theme
+// -----------------------------------------------------------------
+for theme-name in theme-names
+  @import './theme/_'+theme-name+'.styl'
+
+// Mixin
+// -----------------------------------------------------------------
+tm-set-root(props)
+  for theme-name in theme-names
+    theme-value = tm-+theme-name
+    theme-class = theme--+theme-name
+    &.{theme-class}
+      props = arguments if length(arguments) > 1
+      if length(props[0]) > 1
+        for prop in props
+          {prop[0]} theme-value[prop[1]]
+      else
+        {props[0]} theme-value[props[1]]
+
+tm-set-child(props)
+  for theme-name in theme-names
+    theme-value = tm-+theme-name
+    theme-class = theme--+theme-name
+    .{theme-class} &
+      props = arguments if length(arguments) > 1
+      if length(props[0]) > 1
+        for prop in props
+          {prop[0]} theme-value[prop[1]]
+      else
+        {props[0]} theme-value[props[1]]

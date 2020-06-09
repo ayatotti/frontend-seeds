@@ -1,0 +1,33 @@
+// ==========================================================================
+// Component Toggle Switch
+// ==========================================================================
+c-toggle-switch-size = 20px
+c-toggle-switch-margin = 4px
+c-toggle-switch-height = c-toggle-switch-size + ( c-toggle-switch-margin * 2 )
+c-toggle-switch-width = c-toggle-switch-size * 2 + ( c-toggle-switch-margin * 2 )
+
+.c-toggle-switch
+  border-radius c-toggle-switch-height
+  display inline-block
+  height c-toggle-switch-height
+  position relative
+  transition .4s
+  width c-toggle-switch-width
+  +tm-set-child(background-color toggle-switch--unchecked)
+    {block}
+  &:before
+    border-radius 50%
+    bottom c-toggle-switch-margin
+    content ""
+    left c-toggle-switch-margin
+    height c-toggle-switch-size
+    position absolute
+    transition .4s
+    width c-toggle-switch-size
+    +tm-set-child(background-color toggle-switch__slider)
+      {block}
+  input:checked + &
+    +tm-set-child(background-color toggle-switch--checked)
+      {block}
+    &:before
+      transform translateX(c-toggle-switch-size)
